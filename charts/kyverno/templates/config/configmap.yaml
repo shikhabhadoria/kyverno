@@ -7,7 +7,7 @@ metadata:
   labels:
     {{- include "kyverno.config.labels" . | nindent 4 }}
   annotations:
-    {{- with .Values.annotations }}
+    {{- with .Values.config.annotations }}
     {{- toYaml . | nindent 4 }}
     {{- end }}
     {{- if .Values.config.preserve }}
